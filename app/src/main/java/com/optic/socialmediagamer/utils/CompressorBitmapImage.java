@@ -2,39 +2,40 @@ package com.optic.socialmediagamer.utils;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.io.IOException;
-
-import id.zelory.compressor.Compressor;
-
-/**
- * Created by Optic on 24/01/2018.
- */
 
 public class CompressorBitmapImage {
 
-    /*
-     * Metodo que permite comprimir imagenes y transformarlas a bitmap
-     */
     public static byte[] getImage(Context ctx, String path, int width, int height) {
-        final File file_thumb_path = new File(path);
-        Bitmap thumb_bitmap = null;
-
         try {
-            thumb_bitmap = new Compressor(ctx)
-                    .setMaxWidth(width)
-                    .setMaxHeight(height)
-                    .setQuality(75)
-                    .compressToBitmap(file_thumb_path);
-        } catch (IOException e) {
+            BitmapFactory.Options options = new BitmapFactory.Options();
+            options.inJustDecodeBounds = true;
+            BitmapFactory.decodeFile(path, options);
+
+            int inSampleSize = 1;
+            if (options.outHeight > height || options.outWidth > width) {
+                final int halfHeight = options.outHeight / 2;
+                final int halfWidth = options.outWidth / 2;
+                while ((halfHeight / inSampleSize) >= height && (halfWidth / inSampleSize) >= width) {
+                    inSampleSize *= 2;
+                }
+            }
+
+            options.inJustDecodeBounds = false;
+            options.inSampleSize = inSampleSize;
+            Bitmap scaledBitmap = BitmapFactory.decodeFile(path, options);
+
+            if (scaledBitmap != null) {
+                ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                scaledBitmap.compress(Bitmap.CompressFormat.JPEG, 80, baos);
+                return baos.toByteArray();
+            }
+        } catch (Exception e) {
             e.printStackTrace();
         }
-
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        thumb_bitmap.compress(Bitmap.CompressFormat.JPEG,80,baos);
-        byte[] thumb_byte = baos.toByteArray();
-        return  thumb_byte;
+        return new byte[0];
     }
 }
