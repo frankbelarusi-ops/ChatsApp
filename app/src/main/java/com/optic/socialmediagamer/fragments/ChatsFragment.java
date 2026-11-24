@@ -92,8 +92,8 @@ public class ChatsFragment extends Fragment {
         builder.show();
     }
 
-    private void createGroup(String groupName) {
-        String groupId = java.util.UUID.randomUUID().toString();
+    private void createGroup(final String groupName) {
+        final String groupId = java.util.UUID.randomUUID().toString();
         Chat chat = new Chat();
         chat.setId(groupId);
         chat.setGroup(true);
