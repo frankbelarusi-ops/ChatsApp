@@ -1,0 +1,39 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Speech bubble body -->
+    <path
+        android:fillColor="#1E2235"
+        android:strokeColor="#F6292F"
+        android:strokeWidth="2.8"
+        android:strokeLineJoin="round"
+        android:pathData="M32,32 h44 c5,0 9,4 9,9 v22 c0,5 -4,9 -9,9 h-28 l-11,9 v-9 h-5 c-5,0 -9,-4 -9,-9 v-22 c0,-5 4,-9 9,-9 z" />
+
+    <!-- Stylized 'C' letter -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="4.5"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:pathData="M44,45 C38,45 34,48.5 34,53.5 C34,58.5 38,62 44,62" />
+
+    <!-- Stylized 'h' letter -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="4.2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:fillColor="#00000000"
+        android:pathData="M50,40 L50,62 M50,51 C52,47.5 56.5,47.5 60,50.5 L60,62" />
+
+    <!-- Online / Active Notification Indicator Pip -->
+    <path
+        android:fillColor="#24CD38"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1.2"
+        android:pathData="M73,34 a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0" />
+
+</vector>

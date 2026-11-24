@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Dark Gamer/ChatsApp Background -->
+    <path
+        android:fillColor="#11131D"
+        android:pathData="M0,0h108v108h-108z" />
+
+    <!-- Subtle Accent Glow Arc -->
+    <path
+        android:fillColor="#F6292F"
+        android:pathData="M0,0 L108,0 L108,18 L0,54 Z"
+        android:alpha="0.25" />
+
+    <!-- Corner Ambient Glow -->
+    <path
+        android:fillColor="#F6292F"
+        android:pathData="M108,108 L54,108 L108,54 Z"
+        android:alpha="0.3" />
+</vector>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginBottom="6dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="3dp"
+    app:cardBackgroundColor="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- Header: User info + Delete icon -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circleImageLFGUser"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_person" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="10dp">
+
+                <TextView
+                    android:id="@+id/textViewLFGUsername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GamerTag"
+                    android:textStyle="bold"
+                    android:textColor="#1A1A1A"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/textViewLFGTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hace un momento"
+                    android:textColor="#888888"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageViewLFGDelete"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_delete"
+                android:tint="#D32F2F"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- Tags: Game, Platform, Rank, Mic -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/textViewLFGGame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Warzone"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:background="@color/colorAccent"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp" />
+
+            <TextView
+                android:id="@+id/textViewLFGPlatform"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PC"
+                android:textSize="11sp"
+                android:textColor="#333333"
+                android:background="#E8E8E8"
+                android:paddingStart="7dp"
+                android:paddingEnd="7dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:layout_marginStart="6dp" />
+
+            <TextView
+                android:id="@+id/textViewLFGRank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Competitivo"
+                android:textSize="11sp"
+                android:textColor="#333333"
+                android:background="#E8E8E8"
+                android:paddingStart="7dp"
+                android:paddingEnd="7dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:layout_marginStart="6dp" />
+
+            <TextView
+                android:id="@+id/textViewLFGMic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🎙️ Con Micro"
+                android:textSize="11sp"
+                android:textColor="#0851B6"
+                android:background="#E1EBF9"
+                android:paddingStart="7dp"
+                android:paddingEnd="7dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:layout_marginStart="6dp" />
+        </LinearLayout>
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/textViewLFGDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buscamos dúo o trío para subir rango, buena vibra sin toxicidad."
+            android:textColor="#444444"
+            android:textSize="13sp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="10dp" />
+
+        <!-- Action Button: Join Squad -->
+        <Button
+            android:id="@+id/buttonLFGJoin"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:text="🎮 Unirse al Escuadrón / Chatear"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:background="@color/colorAccent" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

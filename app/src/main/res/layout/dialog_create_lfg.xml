@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🎮 Buscar Escuadrón (LFG)"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent"
+        android:gravity="center"
+        android:layout_marginBottom="14dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Juego:"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:textColor="#333333" />
+
+    <Spinner
+        android:id="@+id/spinnerLFGGame"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Plataforma:"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:textColor="#333333" />
+
+    <Spinner
+        android:id="@+id/spinnerLFGPlatform"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Modo / Rango:"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:textColor="#333333" />
+
+    <Spinner
+        android:id="@+id/spinnerLFGRank"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp" />
+
+    <CheckBox
+        android:id="@+id/checkBoxLFGMic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🎙️ Micrófono requerido para discord/chat"
+        android:checked="true"
+        android:textSize="13sp"
+        android:textColor="#333333"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detalle / Nota para el equipo:"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:textColor="#333333" />
+
+    <EditText
+        android:id="@+id/editTextLFGDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ej: Buscamos 2 jugadores con ganas de subir rango hoy"
+        android:textSize="13sp"
+        android:maxLines="3"
+        android:layout_marginBottom="12dp" />
+
+</LinearLayout>
