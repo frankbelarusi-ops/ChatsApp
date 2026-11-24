@@ -13,7 +13,7 @@
         android:orientation="vertical">
 
 
-        <com.github.florent37.shapeofview.shapes.ArcView
+        <io.github.florent37.shapeofview.shapes.ArcView
             android:layout_width="match_parent"
             android:layout_height="220dp"
             android:elevation="4dp"
@@ -44,7 +44,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="40dp" />
 
-        </com.github.florent37.shapeofview.shapes.ArcView>
+        </io.github.florent37.shapeofview.shapes.ArcView>
 
         <LinearLayout
             android:layout_width="match_parent"

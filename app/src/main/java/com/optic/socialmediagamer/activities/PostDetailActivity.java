@@ -48,9 +48,7 @@ import com.optic.socialmediagamer.providers.TokenProvider;
 import com.optic.socialmediagamer.providers.UsersProvider;
 import com.optic.socialmediagamer.utils.RelativeTime;
 import com.optic.socialmediagamer.utils.ViewedMessageHelper;
-import com.smarteist.autoimageslider.IndicatorAnimations;
-import com.smarteist.autoimageslider.SliderAnimations;
-import com.smarteist.autoimageslider.SliderView;
+import androidx.viewpager.widget.ViewPager;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -66,7 +64,7 @@ import retrofit2.Response;
 
 public class PostDetailActivity extends AppCompatActivity {
 
-    SliderView mSliderView;
+    ViewPager mSliderView;
     SliderAdapter mSliderAdapter;
     List<SliderItem> mSliderItems = new ArrayList<>();
     
@@ -335,15 +333,7 @@ public class PostDetailActivity extends AppCompatActivity {
 
     private void instanceSlider() {
         mSliderAdapter = new SliderAdapter(PostDetailActivity.this, mSliderItems);
-        mSliderView.setSliderAdapter(mSliderAdapter);
-        mSliderView.setIndicatorAnimation(IndicatorAnimations.THIN_WORM);
-        mSliderView.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
-        mSliderView.setAutoCycleDirection(SliderView.AUTO_CYCLE_DIRECTION_RIGHT);
-        mSliderView.setIndicatorSelectedColor(Color.WHITE);
-        mSliderView.setIndicatorUnselectedColor(Color.GRAY);
-        mSliderView.setScrollTimeInSec(5);
-        mSliderView.setAutoCycle(true);
-        mSliderView.startAutoCycle();
+        mSliderView.setAdapter(mSliderAdapter);
     }
 
     private void getPost() {
