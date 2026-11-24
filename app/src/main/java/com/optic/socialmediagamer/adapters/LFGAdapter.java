@@ -135,16 +135,13 @@ public class LFGAdapter extends FirestoreRecyclerAdapter<LFGPost, LFGAdapter.Vie
             circleImageUser = itemView.findViewById(R.id.circleImageLFGUser);
             textViewUsername = itemView.findViewById(R.id.textViewLFGUsername);
             textViewTime = itemView.findViewById(R.id.textViewLFGTime);
-            textViewGame = itemView.findViewById(R.id.textViewGame);
+            textViewGame = itemView.findViewById(R.id.textViewLFGGame);
             textViewPlatform = itemView.findViewById(R.id.textViewLFGPlatform);
             textViewRank = itemView.findViewById(R.id.textViewLFGRank);
             textViewMic = itemView.findViewById(R.id.textViewLFGMic);
             textViewDescription = itemView.findViewById(R.id.textViewLFGDescription);
             buttonJoin = itemView.findViewById(R.id.buttonLFGJoin);
             imageViewDelete = itemView.findViewById(R.id.imageViewLFGDelete);
-            if (textViewGame == null) {
-                textViewGame = itemView.findViewById(R.id.textViewLFGGame);
-            }
         }
     }
 }

@@ -9,7 +9,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
+import androidx.appcompat.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
@@ -780,11 +783,11 @@ public class ChatActivity extends AppCompatActivity {
                 "Otro juego"
         };
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        androidx.appcompat.app.AlertDialog.Builder builder = new androidx.appcompat.app.AlertDialog.Builder(this);
         builder.setTitle("⚔️ Retar a un 1v1 Gamer");
-        builder.setItems(games, new DialogInterface.OnClickListener() {
+        builder.setItems(games, new android.content.DialogInterface.OnClickListener() {
             @Override
-            public void onClick(DialogInterface dialog, int which) {
+            public void onClick(android.content.DialogInterface dialog, int which) {
                 sendChallenge(games[which]);
             }
         });
